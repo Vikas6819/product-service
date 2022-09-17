@@ -1,7 +1,3 @@
-plugins {
-    id 'java'
-}
-
 group 'com.javahouse'
 
 repositories {
@@ -9,10 +5,10 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    annotationProcessor "org.projectlombok:lombok:1.18.22"
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
 }
 
-test {
-    useJUnitPlatform()
-}
+jar.enabled(true)
+bootJar.enabled(false)
