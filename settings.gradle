@@ -3,4 +3,5 @@ include 'product-core'
 include 'product-web'
 include 'product-dao'
 include 'product-business'
+include 'product-app'
 

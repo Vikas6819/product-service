@@ -6,12 +6,12 @@ repositories {
 }
 
 dependencies {
-    implementation project(':product-core')
-    implementation project(':product-business')
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.h2database:h2'
+    implementation project(':product-web')
+    implementation project(':product-core')
+    implementation project(':product-business')
+    implementation project(':product-dao')
 }
-
-jar.enabled(true)
-bootJar.enabled(false)
